@@ -1,55 +1,56 @@
 import React from "react";
 
-export default function LatestProject() {
+export default function Teams2() {
   const cards = [
     {
-      img: "/images/01.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Painting, Plumbing",
       status: "Plumbing",
     },
     {
-      img: "/images/02.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Tiles repair",
       status: "Home Maintenance",
     },
     {
-      img: "/images/03.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Flooring, Plumbing",
       status: "Floor Flooring",
     },
     {
-      img: "/images/04.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Flooring, Home Maintenance",
       status: "Drywall Insulation",
     },
     {
-      img: "/images/05.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Electrical, Painting",
       status: "Co-founder & CEO",
     },
     {
-      img: "/images/06.jpg",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp",
       name: "Shoaib Akmal",
       status: "Co-founder & CEO",
     },
   ];
   return (
-    <section className="lg:py-20 md:py-10 py-6 Latest-Projects">
-      <div className="container 2xl:px-20 lg:px-6 px-4 mx-auto">
-        <div className="flex flex-col lg:gap-6 text-white md:gap-4 gap-3">
+    <section className="lg:py-20 Latest-Projects">
+      <div className="container px-10 mx-auto">
+        <div className="flex flex-col gap-6 mb-16 text-white">
           <p className="text-center grayClr">RECENTLY COMPLETED</p>
-          <h2 className=" lg:mb-10 md:mb-8 mb-4 lg:text-5xl md:text-4xl text-3xl text-center ">
-            Our Latest Projects
+          <h2 className="flex mx-auto text-5xl text-center ">
+          Our Latest Projects
           </h2>
+         
         </div>
-        <div className="grid grid-cols-1 gap-4 md:gap-2 p-3 lg:p-6 bg-white lg:grid-cols-3 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 p-6 bg-white 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
           {cards.map((cards, key) => {
             return (
               <>
                 <div className="relative w-full overflow-hidden lg:h-[280px] bg-no-repeat bg-cover group">
                   <img
                     src={cards.img}
-                    className="w-full 2xl:h-[430px] md:h-[280px] h-[220px]"
+                    className="w-full 2xl:h-[420px] md:h-[350px] h-[220px]"
                     alt="Louvre"
                   />
 
@@ -59,11 +60,11 @@ export default function LatestProject() {
                   >
                     <div className="relative flex items-center justify-center w-full h-full border">
                       <div className="">
-                        <h4 className="text-[#f98f04]">{cards.name}</h4>
+                        <h4 className="txet-[#d8232a]">{cards.name}</h4>
                         <a className="hover:yellow text-white text-2xl cursor-pointer font-medium ">
                           {cards.status}
                         </a>
-                        <div className="w-12 pt-4 mx-auto border-b-4 border-[#f98f04]"></div>
+                        <div className="w-12 pt-4 mx-auto border-b-4 border-[#d8232a]"></div>
                       </div>
                     </div>
                   </div>
@@ -71,11 +72,6 @@ export default function LatestProject() {
               </>
             );
           })}
-        </div>
-        <div className="mt-4 lg:mt-12 md:mt-6">
-        <button className=" w-fit flex mx-auto hover:bg-[#f98f04] hover:border-[#f98f04] hover:text-[#ffffff] text-white  p-3 px-12 uppercase   border-[#ffffff] border-2">
-        VIEW MORE GALLERY
-        </button>
         </div>
       </div>
     </section>

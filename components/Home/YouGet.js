@@ -1,4 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import Slider from "react-slick";
 
@@ -15,49 +20,82 @@ export default class AutoPlayMethods extends Component {
     this.slider.slickPause();
   }
   render() {
-    const settings = {
+    var settings = {
       dots: true,
       infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: (
+        <FontAwesomeIcon icon={faChevronRight} className="w-20 text-black" />
+      ),
+      prevArrow: (
+        <FontAwesomeIcon icon={faChevronLeft} className="w-20 text-black" />
+      ),
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
     const data = [
       {
-        Image: "http://www.thamesglobaluae.com/images/blog/07.jpg",
-        heading: "This is the heading",
-        text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of adocument or a typeface without relying on meaningful content.  Lorem ipsum may be used as a placeholder before final copy is available.",
+        Image: "/images/02.jpg",
+        heading: "Floor and Wall Tiling",
+        text: "Floor and Wall Tiling Work including supplying tiles, installation, replacement, and repair.",
       },
       {
-        Image: "http://www.thamesglobaluae.com/images/blog/07.jpg",
-        heading: "This is the heading",
-        text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of adocument or a typeface without relying on meaningful content.  Lorem ipsum may be used as a placeholder before final copy is available.",
+        Image: "/images/05.jpg",
+        heading: "Painting Services",
+        text: "We provide Contracting Services for Interior and Exterior Painting as well as Repainting for Apartments, villas and offices.",
       },
       {
-        Image: "http://www.thamesglobaluae.com/images/blog/07.jpg",
-        heading: "This is the heading2",
-        text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of adocument or a typeface without relying on meaningful content.  Lorem ipsum may be used as a placeholder before final copy is available.",
+        Image: "/images/07.jpg",
+        heading: "Air Conditioner",
+        text: "We specialize in the Installation and Maintenance of AC(Air Conditioning) Ventilation and Air Filtration Systems.",
       },
       {
-        Image: "http://www.thamesglobaluae.com/images/blog/07.jpg",
-        heading: "This is the heading3",
-        text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of adocument or a typeface without relying on meaningful content.  Lorem ipsum may be used as a placeholder before final copy is available.",
+        Image:
+          "/images/08.jpg",
+        heading: "Home Maintainance",
+        text: "We provide Contracting Services for Interior and Exterior Painting as well as Repainting for Apartments, villas and offices.",
       },
-      {
-        Image: "http://www.thamesglobaluae.com/images/blog/07.jpg",
-        heading: "This is the heading",
-        text: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of adocument or a typeface without relying on meaningful content.  Lorem ipsum may be used as a placeholder before final copy is available.",
-      },
+  
     ];
     return (
-      <div className="lg:p-[80px] bg-[url('/images/bgImage.jpg')] bg-no-repeat bg-cover">
-        <div className="flex flex-col gap-6 mb-16">
+      <div className=" bg-[url('/images/bgImage.jpg')] bg-no-repeat bg-cover py-5">
+        <div className="flex flex-col gap-6 mb-3 lg:mb-7 md:mb6">
           <p className="text-center grayClr">OUR SERVICES</p>
-          <h2 className="text-center text-5xl w-[50%] flex mx-auto purpleClr">
+          <h2 className="text-center text-3xl lg:text-5xl md:text-4xl md:w-[50%] flex mx-auto purpleClr">
             What You Will Get Form Us Check It
           </h2>
-          <p className="text-center grayClr font-thin">
+          <p className="font-thin text-center grayClr">
             We are a team of professional and skilled experts in all domestic
             spheres.
           </p>
@@ -73,25 +111,38 @@ export default class AutoPlayMethods extends Component {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <div className=" gap-4 px-8   ">
-          <Slider ref={(slider) => (this.slider = slider)} {...settings}>
-            {data.map((val, key) => {
-              return (
-                <>
-                  <div className="flex mx-2 p-1 shadow-xl flex-col bg-white">
-                    <img src={val.Image} alt="Image" />
-                    <div className="my-4 flex flex-col gap-6 text-center">
-                      <h2 className="text-2xl purpleClr">{val.heading}</h2>
-                      <p className="text-sm grayClr leading-7">{val.text}</p>
-                      <button className=" w-fit flex mx-auto hover:bg-[#292D77] hover:text-white  p-3 px-12 uppercase purpleClr  border-[#292D77] border-2">
-                        Learn More{" "}
-                      </button>
+        <div className="container 2xl:px-20 lg:px-6 px-4 py-3 mx-auto">
+          <div className="gap-4">
+            <Slider ref={(slider) => (this.slider = slider)} {...settings}>
+              {data.map((val, key) => {
+                return (
+                  <>
+                    <div className="pb-4 mb-8 lg:mb-16 md:mb-12">
+                      <div className="flex mx-3 lg:h-[520px] md:h-[500px] h-auto  shadow-xl flex-col bg-white">
+                        <div className="md:h-[280px] h-40">
+                          <img
+                            src={val.Image}
+                            alt="Image"
+                            className="w-full object-cover h-full"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-3  mb-4 text-center 2xl:p-7 lg:p-5 p-3">
+                          <h2 className="md:text-2xl text-xl purpleClr">{val.heading}</h2>
+                          <p className="text-sm leading-6 grayClr">
+                            {val.text}
+                          </p>
+                          <button className=" w-fit flex mx-auto hover:bg-[#292D77] hover:text-white  p-3 px-12 uppercase purpleClr  border-[#292D77] border-2">
+                            Learn More{" "}
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </>
-              );
-            })}
-          </Slider>
+                  </>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </div>
     );

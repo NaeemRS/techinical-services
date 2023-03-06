@@ -5,13 +5,13 @@ function Experience() {
   return (
     <div className="md:my-[98px] my-[40px] md:px-0 px-2">
       <div className="flex xl:flex-row flex-col xl:px-[80px] lg:px-4 container mx-auto ">
-        <div className="xl:w-3/5 w-full xl:mx-16 xl:order-1 order-2">
-          <div className="flex lg:flex-row flex-col lg:items-center md:items-start items-center ">
+        <div className="order-2 w-full xl:w-3/5 xl:mx-16 xl:order-1">
+          <div className="flex flex-col items-center lg:flex-row lg:items-center md:items-start ">
             <h2 className="text-High text-[90px] font-semibold">1997</h2>
             <span class="w-20 lg:block hidden h-full p-0.5 redBg  rotate-90"></span>
             <div className="">
               <div className="flex flex-col ">
-                <p className="grayClr font-medium text-xs">
+                <p className="text-xs font-medium grayClr">
                   24 YEARS EXPERIENCE
                 </p>
                 <h1 className="mx:text-[36px] text-3xl purpleClr">
@@ -20,11 +20,11 @@ function Experience() {
               </div>
             </div>
           </div>
-          <h3 className="grayClr text-[17px] my-5 ">
+          <h3 className="grayClr text-sm md:text-[17px] my-5 ">
             We are a team of professional and skilled experts in all domestic
             spheres. We offer a wide range of services and at the same time
           </h3>
-          <p className="text-sm grayClr leading-[27px] ">
+          <p className="text-sm grayClr  md:leading-[27px] ">
             Thames Global is one the leading technical companies in the UAE and
             we are located at Al Qusais Industrial area 4,Dubai, United Arab
             Emirates. We provide Air Conditioning,Electrical, Plumbing painting
@@ -37,8 +37,8 @@ function Experience() {
             that we can help people with Air Conditioning,Electrical, Plumbing
             and painting services.
           </p>
-          <div className="flex md:flex-row flex-col   my-6 gap-8">
-            <div className="flex flex-col gap-2 w-full">
+          <div className="flex flex-col gap-8 my-6 md:flex-row">
+            <div className="flex flex-col w-full gap-2">
               <div className="flex redClr gap-4   items-center xl:justify-center  xl:px-0 px-2  text-[40px]">
                 <div className="w-[40px] h-[40px]">
                   {" "}
@@ -64,7 +64,7 @@ function Experience() {
                 Projects Completed
               </p>
             </div>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col w-full gap-2">
               <div className="flex redClr gap-4  items-center xl:justify-center  xl:px-0 px-2  text-[40px]">
                 <span className="">
                   {" "}
@@ -90,7 +90,7 @@ function Experience() {
                 Work Employed
               </p>
             </div>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col w-full gap-2">
               <div className="flex redClr gap-4  items-center xl:justify-center  xl:px-0 px-2  text-[40px]">
                 <span className="">
                   {" "}
@@ -118,7 +118,7 @@ function Experience() {
             </div>
           </div>
         </div>
-        <div className="xl:w-2/5 xl:mx-0 mx-auto xl:order-2 order-1">
+        <div className="order-1 mx-auto xl:w-2/5 xl:mx-0 xl:order-2">
           <img src="/images/experience.png" alt="image" />
         </div>
       </div>
