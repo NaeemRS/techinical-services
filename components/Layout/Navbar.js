@@ -29,8 +29,7 @@ const Navbar = () => {
           className={` fixed z-10 w-full  flex items-center justify-between  navbar navbar-expand-lg navbar-light lg:h-[80px] h-[65px] ${scroll ? "bg-[#FFFFFF] shadow-lg lg:text-black" : " bg-white "
             }`}
         >
-
-          <div className="container relative flex items-center justify-between w-full mx-auto  2xl:px-20 lg:px-6 px-4 ">
+          <div className="container relative flex items-center justify-between w-full px-4 mx-auto 2xl:px-20 lg:px-6 ">
             <Link
               className="lg:w-[200px] w-full lg:h-[80px] md:h-12 flex items-center h-12"
               href="/"
@@ -154,7 +153,7 @@ const Navbar = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="w-1/3 mx-auto first-line: cursor-pointer md:w-auto nav-item">
+                <li className="w-1/3 mx-auto cursor-pointer first-line: md:w-auto nav-item">
                   <button
                     className="w-[150px] mx-auto lg:h-[45px] text-white redBg flex items-center justify-center h-12"
                     onClick={() => setMenu(false)}
