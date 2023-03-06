@@ -26,8 +26,9 @@ const Navbar = () => {
     <div className="">
       <section>
         <nav
-          className={` fixed z-10 w-full  flex items-center justify-between  navbar navbar-expand-lg navbar-light lg:h-[80px] h-[65px] ${scroll ? "bg-[#FFFFFF] shadow-lg lg:text-black" : " bg-white "
-            }`}
+          className={` fixed z-10 w-full  flex items-center justify-between  navbar navbar-expand-lg navbar-light lg:h-[80px] h-[65px] ${
+            scroll ? "bg-[#FFFFFF] shadow-lg lg:text-black" : " bg-white "
+          }`}
         >
           <div className="container relative flex items-center justify-between w-full px-4 mx-auto 2xl:px-20 lg:px-6 ">
             <Link
@@ -35,7 +36,11 @@ const Navbar = () => {
               href="/"
             >
               <div className="flex items-center">
-                <img src="/images/logo.png" alt="logo" className="lg:w-[200px] w-full lg:h-[80px] md:h-14 flex items-center h-12" />
+                <img
+                  src="/images/logo.png"
+                  alt="logo"
+                  className="lg:w-[200px] w-full lg:h-[80px] md:h-14 flex items-center h-12"
+                />
               </div>
             </Link>
             <button
@@ -59,14 +64,16 @@ const Navbar = () => {
               </svg>
             </button>
             <div
-              className={`${menu == true
+              className={`${
+                menu == true
                   ? "md:w-[60%] w-[72%] ease-in-out duration-300"
                   : "w-0 ease-in-out duration-200"
-                } bg-[#292D77] lg:bg-transparent  menu-clapse fixed top-0 right-0 bottom-0 lg:relative xl:w-auto z-50 lg:w-auto xl:h-auto lg:h-auto flex xl:justify-end lg:justify-end items-start`}
+              } bg-[#292D77] lg:bg-transparent  menu-clapse fixed top-0 right-0 bottom-0 lg:relative xl:w-auto z-50 lg:w-auto xl:h-auto lg:h-auto flex xl:justify-end lg:justify-end items-start`}
             >
               <ul
                 className="lg:text-puprpleCle lg:text-black text-white flex-col items-center uppercase font-semibold w-full gap-7 pl-0 navbar-nav xl:flex lg:flex md:flex-col list-style-none xl:h-auto xs:pt-10 lg:h-auto `}
-             " >
+             "
+              >
                 <li className="flex justify-end w-full px-3 pt-3 pb-3 text-right lg:pt-0 lg:pb-0 ">
                   <button
                     className={` ${menu == true ? "inline-block" : "hidden"}
@@ -80,10 +87,8 @@ const Navbar = () => {
                     type="button"
                     onClick={() => setMenu(false)}
                   >
-                X
+                    X
                   </button>
-
-                  
                 </li>
                 <li className="w-full cursor-pointer lg:w-auto nav-item">
                   <Link
@@ -91,8 +96,9 @@ const Navbar = () => {
                     href="/"
                   >
                     <div
-                      className={`w-full text-center  cursor-pointer text-[16px]   hover:yellow  ${router.asPath === "/" && "redClr "
-                        }`}
+                      className={`w-full text-center  cursor-pointer text-[16px]   hover:yellow  ${
+                        router.asPath === "/" && "redClr "
+                      }`}
                       onClick={() => setMenu(false)}
                     >
                       Home
@@ -105,8 +111,9 @@ const Navbar = () => {
                     href="/About"
                   >
                     <div
-                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${router.asPath === "/About" && "redClr "
-                        }`}
+                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${
+                        router.asPath === "/About" && "redClr "
+                      }`}
                       onClick={() => setMenu(false)}
                     >
                       About 2
@@ -119,8 +126,9 @@ const Navbar = () => {
                     href="/services"
                   >
                     <div
-                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${router.asPath === "/services" && "redClr "
-                        }`}
+                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${
+                        router.asPath === "/services" && "redClr "
+                      }`}
                       onClick={() => setMenu(false)}
                     >
                       SERVICES
@@ -133,8 +141,9 @@ const Navbar = () => {
                     href="/Gallery"
                   >
                     <div
-                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${router.asPath === "/Gallery" && "redClr "
-                        }`}
+                      className={`w-full text-center text-[16px] cursor-pointer     hover:yellow  ${
+                        router.asPath === "/Gallery" && "redClr "
+                      }`}
                       onClick={() => setMenu(false)}
                     >
                       GALLERY
@@ -147,8 +156,9 @@ const Navbar = () => {
                     href="/Contact"
                   >
                     <div
-                      className={`w-full text-center  text-[16px] cursor-pointer        hover:yellow  ${router.asPath === "/Contact" && "redClr "
-                        }`}
+                      className={`w-full text-center  text-[16px] cursor-pointer        hover:yellow  ${
+                        router.asPath === "/Contact" && "redClr "
+                      }`}
                       onClick={() => setMenu(false)}
                     >
                       Contact Us
