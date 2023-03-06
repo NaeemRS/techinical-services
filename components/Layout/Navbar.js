@@ -82,6 +82,8 @@ const Navbar = () => {
                   >
                 X
                   </button>
+
+                  
                 </li>
                 <li className="w-full cursor-pointer lg:w-auto nav-item">
                   <Link
